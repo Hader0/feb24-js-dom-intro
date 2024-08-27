@@ -12,6 +12,17 @@ let dataArray = [
     "Toyota Corolla"
 ];
 
-dataArray.forEach(plants) => {
-	console.log(plants);
+let carsContainerElement = document.getElementById("carsContainer");
+let carsContainerList = document.createElement("ul");
+
+dataArray.forEach((car) => {
+	console.log(car);
+
+    let newCarEntry = document.createElement("li");
+
+    newCarEntry.innerText += car + "\n";
+
+    carsContainerList.appendChild(newCarEntry);
 });
+
+carsContainerElement.appendChild(carsContainerList);
